@@ -1,0 +1,7 @@
+p {
+		color: black;
+		background: gray;
+		font-weight: underline;
+		text-align: center;
+		text-shadow: 3px 3px 5px red;
+}
