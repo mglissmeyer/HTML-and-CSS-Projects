@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Epoxy Floors</title>
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<script src="JS/one_page_website.js"></script>
 	</head>
 	<body>
 		
@@ -37,33 +38,65 @@
 				<h1>Gallery</h1>
 				<div class="flex-container">
 				
-				<!-- PHOTO CONTAINER 1 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./pictures/images/images_1.jfif" alt="A picture of epoxy flooring">
-							<div class="photo-overlay">
-								<h3 class="white-head">Click to Enlarge</h3>
-								<p>We have a large variety of epoxy flooring to choose from!</p>
-							</div>
-						</div>
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+					  <img src="./pictures/images/images_1.jfif" onclick="openModal();currentSlide(1)" class="hover-shadow">
 					</div>
-					<!-- END PHOTO CONTAINER 1 -->
+					<div class="column">
+					  <img src="./pictures/images/images_2.jfif" onclick="openModal();currentSlide(2)" class="hover-shadow">
+					</div>
+					<div class="column">
+					  <img src="./pictures/images/images_3.jfif" onclick="openModal();currentSlide(3)" class="hover-shadow">
+					</div>
 					
-					<!-- PHOTO CONTAINER 2 -->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./pictures/images/images_2.jfif" alt="A picture of epoxy flooring">
-							<div class="photo-overlay">
-								<h3 class="white-head">Click to Enlarge</h3>
-								<p>We have a large variety of epoxy flooring to choose from!</p>
-							</div>
-						</div>
+				  </div>
+				  
+				  <!-- The Modal/Lightbox -->
+				  <div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				  
+					  <div class="mySlides">
+						<div class="numbertext">1 / 3</div>
+						<img src="./pictures/images/images_1 - Copy.jfif" style="width:100%">
+					  </div>
+				  
+					  <div class="mySlides">
+						<div class="numbertext">2 / 3</div>
+						<img src="./pictures/images/images_2 - Copy.jfif" style="width:100%">
+					  </div>
+				  
+					  <div class="mySlides">
+						<div class="numbertext">3 / 3</div>
+						<img src="./pictures/images/images_3 - Copy.jfif" style="width:100%">
+					  </div>
+				  
+				  
+					  <!-- Next/previous controls -->
+					  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+				  
+					  <!-- Caption text -->
+					  <div class="caption-container">
+						<p id="caption"></p>
+					  </div>
+				  
+					  <!-- Thumbnail image controls -->
+					  <div class="column">
+						<img class="demo" src="./pictures/images/images_1.jfif" onclick="currentSlide(1)" alt="Nature">
+					  </div>
+				  
+					  <div class="column">
+						<img class="demo" src="./pictures/images/images_2.jfif" onclick="currentSlide(2)" alt="Snow">
+					  </div>
+				  
+					  <div class="column">
+						<img class="demo" src="./pictures/images/images_3.jfif" onclick="currentSlide(3)" alt="Mountains">
+					  </div>
+				  					  
 					</div>
-					<!-- END PHOTO CONTAINER 2 -->
-					
-					</div>
-			</div>
-		</section>
+				  </div>
 		<!-- END GALLERY -->
 		
 		<!-- RSVP -->
